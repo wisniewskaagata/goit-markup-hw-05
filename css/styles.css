@@ -21,6 +21,7 @@
     --tittle:rgba(47, 48, 58, 0.4);
     --end: rgba(255, 255, 255, 0.6);
     --socialmedia: rgba(255, 255, 255, 0.1);
+    --label: rgba(47, 48, 58, 0.8);
 }
 body {
     width: 1600px;
@@ -77,16 +78,37 @@ body {
 .hover-link {
     padding-right: 46px;
 }
+.effect {
+    position: relative;
+}
+.effect::after {
+    content: '';
+        height: 4px;
+        background: var(--blue);
+        border-radius: 2px;
+        position:absolute;
+    bottom: -28px;
+}
+.effect:hover::after {
+    width: 100%;
+    left: 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .permalink-telephone {
     padding-left: 50px;
 }
 .menu a:focus,
 .menu a:hover{
     color: var(--blue);
+        transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .write a:hover svg,
 .write a:focus svg {
     fill: var(--blue);
+        transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .write a {
     font-weight: 500;
@@ -214,6 +236,29 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    height: 294px;
+}
+.thumb {
+    position:relative;
+    overflow:hidden;
+}
+.thumb>.label {
+    position: absolute;
+    bottom: 0;
+        right: 0;
+        margin: 0;
+        width: 370px;
+    background-color: var(--label);
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--white);
+        padding: 27px;
 }
 .social-icons {
     list-style: none;
@@ -279,10 +324,10 @@ body {
 .socialmedia-link:focus {
     fill: var(--white);
     background: var(--blue);
+        transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-icon {
-    list-style: none;
-    display: flex;
     fill: var(--social);
 }
 .client {
@@ -291,15 +336,16 @@ body {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
-    gap: 30px;
 }
 .client:hover,
 .client:focus {
     fill: var(--blue);
     border-color: var(--blue);
     cursor: pointer;
+        transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .end {
     font-size: 14px;
@@ -363,6 +409,8 @@ body {
     color: var(--white);
     cursor: pointer;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .description-img {
     list-style: none;
@@ -379,6 +427,8 @@ body {
     cursor: pointer;
     border: 1px solid var(--white);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .border {
     border-left: 1px solid var(--fourth);
