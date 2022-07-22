@@ -98,12 +98,16 @@ body {
 .permalink-telephone {
     padding-left: 50px;
 }
+.permalink:hover,
+.permalink:focus,
 .menu a:focus,
-.menu a:hover{
+.menu a:hover,
+.write a:hover,
+.write a:focus {
     color: var(--blue);
-        transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 .write a:hover svg,
 .write a:focus svg {
     fill: var(--blue);
@@ -200,10 +204,6 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-}
-.description {
-    list-style: none;
-    display: flex;
 }
 .poem {
     font-weight: 700;
@@ -328,16 +328,19 @@ body {
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-icon {
-    fill: var(--social);
+    list-style: none;
+        display: flex;
+        fill: var(--social);
+        gap: 30px;
 }
 .client {
     width: 170px;
-    height: 92px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
+        height: 92px;
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
 }
 .client:hover,
 .client:focus {
@@ -421,11 +424,9 @@ body {
 .img {
     display: flex;
     background: var(--white);
-    max-width: 370px;
 }
 .img:hover {
     cursor: pointer;
-    border: 1px solid var(--white);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
         transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -449,4 +450,39 @@ body {
     line-height: 1.5;
     letter-spacing: 0.03em;
     padding-top: 8px;
+}
+.backdrop{
+    position:fixed;
+    width: 100%;
+        height: 1024px;
+        left: 0px;
+        top: 0px;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+.modal{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+}
+.close-button{
+    position:absolute;
+    top:8px;
+    right:8px;
+    width:30px;
+    height:30px;
+    background-color: var(--white);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    cursor:pointer;
+}
+.is-hidden {
+    opacity:0;
+    visibility: hidden;
+    pointer-events:none;
 }
