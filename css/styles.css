@@ -506,12 +506,13 @@ font-size: 18px;
     position:absolute;
     top:8px;
     right:8px;
-    width:30px;
-    height:30px;
     background-color: var(--white);
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor:pointer;
+    width: 30px;
+    height: 30px;
+    padding: 9px 10px;
 }
 .is-hidden {
     opacity:0;
