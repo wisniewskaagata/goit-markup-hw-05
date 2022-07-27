@@ -83,19 +83,15 @@ body {
     position: relative;
 }
 .effect::after {
-    content: '';
+    content:'';
     height: 4px;
     background: var(--blue);
     border-radius: 2px;
     position: absolute;
     bottom: -28px;
-}
-.effect:hover::after,
-.effect:focus::after {
+    text-transform: uppercase;
     width: 100%;
-    left: 0;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    left:0;
 }
 .permalink-telephone {
     padding-left: 50px;
