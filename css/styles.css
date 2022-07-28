@@ -88,7 +88,7 @@ body {
     background: var(--blue);
     border-radius: 2px;
     position: absolute;
-    bottom: -28px;
+    bottom: -31px;
     text-transform: uppercase;
     width: 100%;
     left:0;
@@ -507,22 +507,31 @@ font-size: 18px;
     height: 100%;
 }
 .close-button{
-    position:absolute;
-    top:8px;
-    right:8px;
-    background-color: var(--white);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor:pointer;
-    width: 30px;
-    height: 30px;
-    padding: 9px 10px;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    right: 8px;
+        top: 8px;
+}
+.modal-button {
+        position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
 }
 .modal-button:hover {
-    transition-duration: 250ms;
+    border: 2px solid rgba(0, 0, 0, 0.1);;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
-        cursor: pointer;
+}
+
+.modal-button:hover svg{
+    fill: var(--blue)
 }
 .is-hidden {
     opacity:0;
