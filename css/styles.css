@@ -525,7 +525,7 @@ font-size: 18px;
             height: 30px;
 }
 .modal-button:hover {
-    border: 2px solid rgba(0, 0, 0, 0.1);;
+    border: 1px solid var(--blue);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
 }
